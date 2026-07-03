@@ -1,7 +1,7 @@
 ## 项目架构
 
 
-### 单一入口点（Single Entry Point / SEP）
+### 单一入口点
 
 本项目遵循 **单一入口点（SEP）** 方法论。
 
@@ -17,8 +17,7 @@
 
 ---
 
-## 职责划分（Division of Responsibilities）
-
+## 职责划分
 项目中的脚本可以分为多个类别，每个类别都有其明确的职责。
 
 ### 1. Installer
