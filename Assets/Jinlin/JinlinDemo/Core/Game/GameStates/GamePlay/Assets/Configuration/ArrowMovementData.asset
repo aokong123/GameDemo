@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c668ad3d234944febd58af039b776d2c, type: 3}
+  m_Name: ArrowMovementData
+  m_EditorClassIdentifier: 
+  SpacePressedRotationLoopSpeed: -13.5
+  MaxStabAngleWithSurface: 60
+  StartRotationLoopSpeed: -12
+  ShootAngleRelativeToFloor: -60
+  ShootRotationDuration: 0.5
+  JumpAngleRelativeToFloor: 75
+  JumpForce: 8
+  ShootVelocity: 32
+  AngularDrag: 2

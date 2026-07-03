@@ -1,0 +1,23 @@
+{
+    "name": "GamePlayEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f2b6c7fcef93c469e982a640a50f422d",
+        "GUID:ec34a38cd6987469fb186013c4d9da54",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:d119626a6c8fc4d158773ad470c90438",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:78d19d94063614296888907cf82fca58"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

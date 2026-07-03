@@ -1,0 +1,15 @@
+﻿<Solution>
+  <Project Path="GameAssembly.csproj" />
+  <Project Path="Zenject.csproj" />
+  <Project Path="asset-store-tools-editor.csproj" />
+  <Project Path="GamePlayAssembly.csproj" />
+  <Project Path="CoreAssembly.csproj" />
+  <Project Path="Zenject-Editor.csproj" />
+  <Project Path="GamePlayEditor.csproj" />
+  <Project Path="CorePluginsAssembly.csproj" />
+  <Project Path="CoreEditorAssembly.csproj" />
+  <Project Path="Zenject-ReflectionBaking-Editor.csproj" />
+  <Project Path="LobbyAssembly.csproj" />
+  <Project Path="Zenject-TestFramework.csproj" />
+  <Project Path="Zenject-PoolMonitor-Editor.csproj" />
+</Solution>
