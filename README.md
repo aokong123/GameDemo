@@ -90,43 +90,43 @@
 
 ### 技术要点
 
-#### 1. UpdateSubscriptionService（UpdateManager）
+#### 1. UpdateSubscriptionService
 - 本项目使用 **UpdateManager** 模式来提升**性能**，并允许任何脚本订阅 **Update / FixedUpdate / LateUpdate** 方法。
 
-#### 2. 摄像机分离（Cameras Separation）
+#### 2. 摄像机分离
 - 使用**2 台摄像机**：一台用于渲染世界，另一台用于渲染 UI，以确保 **Post-Processing** 或其他调整不会影响 UI。
 
-#### 3. 对象池（Object Pooling）
+#### 3. 对象池
 - 在游戏过程中频繁创建的对象被回收利用，以减少内存分配。
 - 例如：**ScoreGainedFXPool** 回收 **ScoreGainedFXView**。
 
-#### 4. 资源加载（Asset Loading）
+#### 4. 资源加载
 - 本项目使用 Unity 的 **Addressable System** 来动态加载资源。
 - **注意：** 所有资源目前都是项目的一部分，但可以轻松地移至外部服务器并**远程加载**。
 - **本项目解决方案：** 多次构建 Bundles，每个版本构建一次。每个线上版本将加载其对应的 bundles，不会出现问题。
   **替代方案：** 只构建原始资源（如图片、3D 模型、音频文件或不附加脚本的 prefab）。
 
-#### 5. 单元测试（Unit Tests）
+#### 5. 单元测试
 - 本项目仅对其核心逻辑 Service 进行单元测试覆盖。这可以扩展到更多类。
 - 作为 **CI/CD** 流水线的一部分，**PreBuildUnitTestsValidator** 类在任何单元测试失败时会使构建失败。
 
-#### 6. 动画（Animations）
+#### 6. 动画
 - 本项目使用 **Legacy Animation** 来执行简单动画，其性能显著更优——尤其对于 UI 对象。
   **注意：** 如果有复杂的动画对象（如人形角色），则会改用 **Animator** 组件。
 
 #### 7. Prefabs
 - 大多数对象都是 prefab，以避免多个开发者并行工作时发生场景冲突。
 
-#### 8. 光照烘焙（Lights Baking）
+#### 8. 光照烘焙
 - 环境光照是预先烘焙的，以提升运行时性能。
 
-#### 9. Draw Calls 合批（Draw Calls Batching）
+#### 9. Draw Calls 合批
 - 环境中的所有对象使用单一材质，使其能够在一次 draw call 中渲染，提升性能。
 
 #### 10. Shaders
 - 在可能的情况下，使用 shader 代替动画。例如，中水平滚动的山脉背景，因为 shader 计算在 GPU 上并行运行，比基于 CPU 的动画快得多。
 
-#### 11. 日志（Logs）
+#### 11. 日志
 - 整个代码库都有日志监控，以便于调试。
 
 #### 12. Tween 动画
@@ -151,7 +151,7 @@
 
 1. 本项目主要遵循 **Microsoft 编码规范（Microsoft's Coding Conventions）**。
 
-### 异步操作（Async Operations）
+### 异步操作
 
 1. 本项目使用 **Awaitables**——Unity 中异步操作的全新改进原生解决方案。
 2. 由于异步操作默认不捕获异常，每次启动异步操作时，**必须**使用 **try/catch** 块将其包裹。
